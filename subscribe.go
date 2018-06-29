@@ -51,8 +51,10 @@ func Subscribe(eventPrefix string, token string) <-chan Event {
 	// check for :ok as first event on stream
 	line, err := reader.ReadString('\n')
 	if err != nil {
+	        log.Println("Cannot Subscribe to Event.  Possible bad token.")
 		log.Fatal(err)
 	} else if line != ":ok\n" {
+	        log.Println("Cannot Subscribe to Event.  Possible bad token.")
 		log.Fatal(line)
 	}
 

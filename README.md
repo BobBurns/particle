@@ -32,7 +32,7 @@ type Event struct {
 
 ## This is a Fork of github.com/mckee/particle
 
-Add support to publish event.
+Add support to publish event. For example see https://github.com/BobBurns/motorworld
 
 #### func Publish
 
