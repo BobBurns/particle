@@ -29,3 +29,31 @@ type Event struct {
 	}
 }
 ```
+
+## This is a Fork of github.com/mckee/particle
+
+Add support to publish event.
+
+#### func Publish
+
+```go
+func (e *Event) Publish (token string) (*Result, error)
+```
+
+Slightly changed the Event type
+
+```go
+type Data struct {
+	Data      string    `json:"data"`
+	TTL       uint32    `json:"ttl"`
+	Timestamp time.Time `json:"published_at"`
+	CoreID    string    `json:"coreid"`
+	Private	  bool
+}
+
+type Event struct {
+	Name string
+	Data Data
+
+}
+```
